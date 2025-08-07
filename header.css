@@ -1,0 +1,125 @@
+.top {
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-bottom: 2px solid rgb(228,228,228);
+    z-index: 2;
+}
+
+@media (min-width: 1200px) {
+    .top {
+        display: none;
+    }  
+}
+
+.name {
+    font-family: "Lora",serif;
+    font-size: 24px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    white-space: nowrap;
+}
+
+.top-right {
+    width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-right: 25px;
+    
+}
+
+.hamburger-button {
+    border: 0;
+    background-color: transparent;
+    display: inline-block;
+    cursor: pointer;
+    padding: 0;
+}
+
+.hamburger-header-1 {
+    margin-top: 1px;
+    width: 44px;
+    border: 0;
+}
+
+.hamburger-header {
+    margin-top: 1px;
+    width: 44px;
+    border: 0;
+}
+
+.hamburger-button.hide, .hamburger-header.hide {
+    display: none;
+}
+
+.close-button {
+    border: 0;
+    background-color: transparent;
+    display: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.close-header {
+    display: none;
+    margin-top: 1px;
+    width: 34px;
+    border: 0;
+}
+
+.close-button.show {
+    display: inline-block;
+}
+
+.close-header.show {
+    display: block;
+}
+
+@media (max-width: 400px) {
+    .hamburger-header-1 {
+        display: none;
+    }
+}
+
+@media (max-width: 535px) {
+    .name {
+        font-size: clamp(20px, 4vw, 24px);
+    }
+    .hamburger-header {
+        width: clamp(30px, 5vw, 44px);
+    }
+    .close-header {
+        width: clamp(30px, 5vw, 44px);
+    }
+    .hamburger-header-1 {
+        width: clamp(8px, 5vw, 44px);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .top {
+        background-color: rgb(30,30,30);
+        border-bottom: 2px solid rgb(85, 85, 85);
+    }
+    .name {
+        color: white;
+    }
+    .hamburger-header {
+        filter: invert(100%);
+    }
+    .close-header {
+        filter: invert(100%);
+    }
+    .hamburger-header-1 {
+        filter: invert(100%);
+    }
+}

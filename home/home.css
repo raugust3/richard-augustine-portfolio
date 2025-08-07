@@ -1,0 +1,466 @@
+.introduction {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    margin-right: 50px;
+    max-width: 1020px;
+}
+
+.hello-div {
+    display: inline-block;
+}
+
+.hello {
+    font-size: 22.5px;
+    margin-top: -3px;
+    padding-top: 0px;
+    margin-bottom: 25px;
+    line-height: 28px;
+    max-width: 1020px;
+}
+
+.hello .name {
+    font-size: clamp(32px, 6vw, 86px);
+    margin: 0;
+    margin-top: 45px;
+    margin-bottom: 55px;
+}
+
+.about {
+    font-size: clamp(18px, 1.5vw, 22.5px);
+    margin-top: 0px;
+    margin-bottom: 25px;
+    line-height: 28px;
+    max-width: 1020px;
+}
+
+.profile {
+    display: inline-block;
+}
+
+.profile-pic-phone {
+    display: none;
+    width: 150px;
+    border-radius: 12px;
+    margin-left: 30px;
+}
+
+.profile-phone {
+    display: flex;
+    padding-right: 18px;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-pic {
+    width: 212px;
+    border-radius: 12px;
+    margin-left: 30px;
+}
+
+.about-container {
+    display: flex;
+    vertical-align: top;
+    margin-top: 30px;
+    margin-bottom: 18px;
+    padding-right: 50px;
+}
+
+.view-buttons {
+    display: flex;
+    justify-content:left;
+    align-items: center; 
+    column-gap: 42px;   
+    row-gap: 30px;          
+    flex-wrap: wrap; 
+    margin-top: 15px;         
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-right: 18px;
+}
+
+.view-resume {
+    border-color: rgb(30,30,30);
+    width: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: rgb(30,30,30);
+    background-color: white;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 24px;
+    border: 3px solid black;
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.view-icons {
+    display: flex;
+    width: 200px;
+    color: rgb(30,30,30);
+    background-color: transparent;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.view-resume:hover {
+    border-color: rgb(30,30,30);
+    background-color: rgb(30,30,30);
+    color: white;
+}
+
+.view-buttons img {
+    transition: filter 0.3s ease;
+}
+
+.view-icons img:hover {
+    filter: brightness(0) saturate(100%) invert(49%) sepia(92%) saturate(1361%) hue-rotate(14deg) brightness(110%) contrast(101%);
+}
+
+.category-title {
+    display: flex;
+    align-items: center;
+    max-width: 1020px;
+    margin-right: 18px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.selected-projects {
+    font-style: italic;
+    font-size: 46px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 30px;
+}
+
+.line1 {
+    display: none;
+    flex: 1;
+    height: 2px;
+    background-color: black;
+    border: none;
+    margin: 0;
+    max-width: 1020px;
+}
+
+.line2 {
+    flex: 1;
+    height: 2px;
+    background-color: black;
+    border: none;
+    margin: 0;
+    max-width: 1020px;
+}
+
+.project-images {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    gap: 10px;
+    margin-bottom: 30px;
+    margin-right: 70px;
+    justify-content: center;
+}
+
+.project-card {
+    position: relative;
+    flex-shrink: 0;
+    max-width: 321px;
+    height: 450px;
+    border: 3px solid black;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: background-color 0.3s;
+}
+
+.project-card:hover {
+    background-color: black;
+}
+
+.project-card:hover .project-title {
+    color: white;
+}
+
+.project-card .project-image {
+    width: 100%;
+    height: 100%;
+    max-height: 321px;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+
+.project-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: left;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+}
+
+.project-title {
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: black;
+    margin-bottom: 0px;
+    font-size: clamp(20px, 2vw, 20px);
+    transition: color 0.3s;
+}
+
+.project-skills {
+    margin-left: 15px;
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+}
+
+.icon {
+    max-width: 35px;
+}
+
+.project-description {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    color: rgb(127, 127, 127);
+    font-size: 16px;
+}
+
+.url {
+    color: rgb(238,159,0);
+    text-decoration: none;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media (max-width: 400px) {
+    .samsung {
+        display: none;
+    }
+    .project-card {
+        max-width: 275px;
+        height: 100%;
+    }
+    .project-skills {
+        margin-bottom: 15px;
+    }
+    .about {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 535px) {
+    .hello {
+        font-size: clamp(20px,6vw,30px);
+    }
+    .hello .name {
+        margin-top: clamp(15px,5vw,35px);
+        justify-content: center;
+    }
+    .category-title {
+        margin-right: 0px;
+        justify-content: center;
+        margin-bottom: 46px;
+    }
+    .line1 {
+        display: none;
+    }
+    .line2 {
+        display: none;
+    }
+    .introduction {
+        justify-content: center;
+        margin-right: 0;
+        padding-right: 0px;
+        align-items: center;
+        text-align: center;
+    }
+    .profile-pic {
+        display: none;
+    }
+    .profile-pic-phone {
+        display: flex;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .profile-phone {
+        padding-right: 0;
+    }
+    .about {
+        text-align: center;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .about-container {
+        padding: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .view-buttons {
+        margin-right: 0px;
+    }
+    .selected-projects {
+        margin-left: 0px;
+        margin-right: 0px;
+        white-space: nowrap;
+        font-size: clamp(36px, 10vw, 46px);
+    }
+    .project-images {
+        margin-right: 0px;
+    }
+    .url {
+        text-decoration: underline;
+    }
+}
+
+@media (max-width: 842px) {
+    .view-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 535px) and (max-width: 1030px) {
+    .project-images {
+        margin-right: 0px;
+    }
+}
+
+@media (min-width: 535px) and (max-width: 1023px) {
+    .view-buttons {
+        justify-content: center;
+        max-width: 1020px;
+        margin-right: 0px;
+    }
+    .about {
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .about-container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+    .hello {
+        text-align: center;
+    }
+    .selected-projects {
+        margin-left: 30px;
+        text-align: center;
+        white-space: nowrap;
+    }
+    .category-title {
+        margin-left: 18px;
+        margin-right: 18px;
+        justify-content: center;
+        margin-bottom: 46px;
+    }
+    .profile-pic {
+        display: none;
+    }
+    .profile-phone {
+        padding-right: 0px;
+    }
+    .profile-pic-phone {
+        display: flex;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .introduction {
+        justify-content: center;
+        margin-right: 0;
+        align-items: center;
+        text-align: center;
+    }
+    .hello .name {
+        margin-top: 35px;
+        justify-content: center;
+    }
+    .line1 {
+        display: flex;
+    }
+    .project-images {
+        margin-right: 0px;
+    }
+    .url {
+        text-decoration: underline;
+    }
+}
+
+@media (min-width: 1200px) {
+    .project-images {
+        justify-content: left;
+    }   
+}
+
+@media (max-width: 1200px) {
+    .title {
+        display: none;
+    }
+    .sidebar-buttons {
+        display: none;
+    }
+    .contact {
+        display: none;
+    }
+    .hello .name {
+        font-size: clamp(33px, 8vw, 70px);
+        margin-bottom: clamp(25px, 5vw, 50px);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .hello {
+        color: white;
+    }
+    .about {
+        color: white;
+    }
+    .view-resume {
+        border-color: white;
+        color: white;
+        background-color: rgb(30,30,30);
+    }
+    .view-icons img {
+        /* now invert by default */
+        filter: invert(100%);
+        /* and animate any filter changes */
+        transition: filter 0.3s;
+    }
+    .view-icons img:hover {
+        /* keep the invert and add your other filters */
+        filter: invert(100%)
+                brightness(0) saturate(100%) invert(49%) sepia(92%)
+                saturate(1361%) hue-rotate(14deg) brightness(110%) contrast(101%);
+    }
+    .view-resume:hover {
+        background-color: white;
+        color: rgb(30,30,30);
+        border-color: white;
+    }
+    .selected-projects {
+        color: white;
+    }
+    .project-title {
+        color: white;
+    }
+    .line1 {
+        background-color: white;
+    }
+    .line2 {
+        background-color: white;
+    }
+    .project-card {
+        border: 3px solid white;
+    }
+    .project-card:hover {
+        background-color: white;
+    }
+    .project-card:hover .project-title {
+        color: black;
+    }
+}

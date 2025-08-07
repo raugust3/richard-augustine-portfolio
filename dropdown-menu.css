@@ -1,0 +1,84 @@
+.dropdown-menu {
+    position: fixed;
+    background-color: white;
+    border-bottom: 1px solid rgb(85, 85, 85);
+    top: -212px;
+    left: 0;
+    right: 0;
+    height: 210px;
+    z-index: 2;
+    transition: top 0.3s ease-out;
+}
+
+#overlay {
+    background-color: rgba(0,0,0,0.5);
+    inset: 0;
+    position: fixed;
+    display: none;
+}
+
+.dropdown-menu.show {
+    top: 70px;
+}
+
+.dropdown-menu.show ~ #overlay {
+    display: block;
+}
+
+.home-dropdown, .projects-dropdown, .contact-dropdown {
+    display: block;
+    position: relative;
+    width: 50%;
+    text-align: center;
+    font-family: "Lora", serif;
+    font-size: 22.5px;
+    margin-left: 0px;
+    background-color: white;
+    border-left: none;
+    border-right: none; 
+    margin-left: 25vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+.home-dropdown {
+    border-top: none;
+    border-bottom: 2px solid rgb(85, 85, 85);
+}
+
+.projects-dropdown {
+    border-top: none;
+    border-bottom: 2px solid rgb(85, 85, 85);
+}
+
+.contact-dropdown {
+    border-top: none;
+    border-bottom: none;
+}
+
+.dropdown-buttons {
+    text-align: center;
+}
+
+@media (min-width: 1200px) {
+    .dropdown-menu {
+        display: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .dropdown-menu {
+        background-color: rgb(30,30,30);
+    }
+    .home-dropdown, .projects-dropdown, .contact-dropdown {
+    background-color: rgb(30,30,30);
+    color: white;
+    }
+    .home-dropdown {
+        border-bottom: 2px solid rgb(85, 85, 85);
+    }
+    .projects-dropdown {
+        border-bottom: 2px solid rgb(85, 85, 85);
+    }
+}

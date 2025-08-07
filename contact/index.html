@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - Richard Augustine</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Richard Augustine’s Engineering Portfolio">
+
+    <meta property="og:title" content="Richard Augustine – Engineering Portfolio">
+    <meta property="og:description" content="Work and Projects of Richard Augustine.">
+    <meta property="og:image" content="https://yourdomain.com/images/LinkedIn%20Profile%20Picture1.jpg">
+    <meta property="og:url" content="https://yourdomain.com/projects/">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/png" href="../images/icons/4-point-star-icons-vector-31655182-removebg-preview.png">
+    <link rel="icon" type="image/png" href="../images/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../images/icons/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="../images/icons/site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="../sidebar.css">
+    <link rel="stylesheet" href="sidebar-contact.css">
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="../dropdown-menu.css">
+<body>
+    <nav id="dropdown-menu" class="dropdown-menu">
+        <div class="dropdown-buttons">
+            <a class="link" href="../home/"><button class="home-dropdown">
+                HOME
+            </button></a>
+            <a class="link" href="../projects/"><button class="projects-dropdown">
+                PROJECTS
+            </button></a>
+            <a class="link" href="../contact/"><button class="contact-dropdown">
+                ABOUT
+            </button></a>
+        </div>
+    </nav>
+    <div class="layout">
+        <header class="top">
+            <p class="name">
+                Richard Augustine <img class="hamburger-header-1" style="margin-left: 10px;" src="../images/icons/line.png" alt="break between name and current page in header" loading="lazy"> 
+                <span class="samsung" style="color: rgb(238,159,0); margin-left: 10px;">
+                    CONTACT
+                </span>
+            </p>
+            <div class="top-right">
+                <button id="hamburger-menu" class="hamburger-button" onclick="openMenu()">
+                    <img class="hamburger-header" src="../images/icons/hmenu.png" alt="hamburger menu icon" loading="lazy">
+                </button>
+                <button id="close-button" class="close-button" onclick="closeMenu()">
+                    <img id="close-header" class="close-header" src="../images/icons/closeMenu.png" alt="close menu icon" loading="lazy">
+                </button>
+            </div>
+        </header>
+        <nav class="left">
+            <div>
+                <p class="title">
+                    Richard Augustine
+                </p>
+            </div>
+            <div class="sidebar-buttons">
+                <a class="link" href="../home/"><button class="home-button">
+                    HOME
+                </button></a>
+                <a class="link" href="../projects/"><button class="projects-button">
+                    PROJECTS
+                </button></a>
+                <a class="link" href="../contact/"><button class="contact-button">
+                    ABOUT
+                    <img class="star" src="../images/icons/4-point-star-icons-vector-31655182-removebg-preview.png" alt="star icon" loading="lazy">
+                </button></a>
+            <div>
+                <p class="contact">You can find me on <a class="contact-url" href="https://www.linkedin.com/in/richard-augustine/" target="_blank" rel="noopener noreferrer">LinkedIn</a>, <a class="contact-url" href="https://github.com/raugust3" target="_blank" rel="noopener noreferrer">GitHub</a>, view my <a class="contact-url" href="MasterResume_RichardAugustine_Apr2025.pdf" target="_blank" rel="noopener noreferrer">resume</a>, or <a class="contact-url" href="mailto:richard.augustine95@gmail.com" target="_blank" rel="noopener noreferrer">email me</a>!</p>
+            </div>
+        </nav>
+        <main class="right">
+            <section class="about-container">
+                <div class="text">
+                    <p class="about fade-in">
+                        Hi! I’m an undergraduate engineering student at the University of Western Ontario, working toward a degree in Mechatronics and Artificial Intelligence Systems Engineering.
+                    </p>
+                    <p class="about fade-in">
+                        I’ve spent the past few years exploring the overlap between mechanical systems, electrical systems, and machine learning—and somewhere along the way, realized that debugging circuits and training neural networks is actually kind of fun (most days).
+                    </p>
+                    <p class="about fade-in">
+                        Outside of class, I’m probably 3D printing, painting something I’ll take too long to finish, or occasionally generating music with code (and pretending it was intentional).
+                    </p>
+                    <p class="about fade-in">
+                        Thank you for taking the time to explore my portfolio. Looking forward to hearing from you!
+                    </p>
+                    <img src="../images/icons/signature.png" class="signature fade-in">
+                </div>
+            </div>
+            <section class="about-container-small">
+                <div class="text">
+                    <p class="about">
+                        Hi! My name is Richard Augustine 👋
+                    </p>
+                    <p class="about">
+                        I’m an undergraduate engineering student at the University of Western Ontario, working toward a degree in Mechatronics and Artificial Intelligence Systems Engineering.
+                    </p>
+                    <p class="about">
+                        I’ve spent the past few years exploring the overlap between mechanical systems, electrical systems, and machine learning—and somewhere along the way, realized that debugging circuits and training neural networks is actually kind of fun (most days).
+                    </p>
+                    <p class="about">
+                        Outside of class, I’m probably 3D printing, painting something I’ll take too long to finish, or occasionally generating music with code (and pretending it was intentional).
+                    </p>
+                    <p class="about">
+                        Thank you for taking the time to explore my portfolio. Looking forward to hearing from you!
+                    </p>
+                    <img src="../images/icons/signature.png" class="signature-small">
+                </div>
+            </section>            
+        </main>
+    </div>
+    <div id="overlay" onclick="closeMenu()"></div>
+    <script src="../script.js"></script>
+</body>
+</html>

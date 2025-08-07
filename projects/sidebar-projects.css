@@ -1,0 +1,43 @@
+.star {
+    position: relative;
+    right: -94px;
+    top: 2.2px;
+    width: 20px;
+    justify-content: center;
+    align-items: center;
+    animation: rotate 4s linear infinite;
+}
+
+.projects-button:hover .star {
+    filter: brightness(0) saturate(100%) invert(49%) sepia(92%) saturate(1361%) hue-rotate(14deg) brightness(110%) contrast(101%);
+}
+
+.home-button {
+    border-top: 2px solid rgb(217,217,217);
+    border-bottom: 2px solid black;
+}
+
+.projects-button {
+    border-top: none;
+    border-bottom: 2px solid black;
+}
+
+.contact-button {
+    border-top: none;
+    border-bottom: 2px solid rgb(217,217,217);
+}
+
+@media (prefers-color-scheme: dark) {
+    .home-button {
+        border-top: 2px solid rgb(127,127,127);
+        border-bottom: 2px solid white;
+    }
+    .projects-button {
+        border-top: none;
+        border-bottom: 2px solid white;
+    }
+    .contact-button {
+        border-top: none;
+        border-bottom: 2px solid rgb(127,127,127);
+    }
+}

@@ -1,0 +1,98 @@
+.title {
+    font-family: "Lora", serif;
+    font-size: 26px;
+    margin-top: 0;
+    line-height: 25px;
+}
+
+.left {
+    flex-shrink: 0;
+    margin-left: 18px;
+    width: 240px;
+    margin-right: 80px;
+    margin-top: 30px;
+    display: block;
+    position: fixed;
+}
+
+.home-button:hover .star {
+    filter: brightness(0) saturate(100%) invert(49%) sepia(92%) saturate(1361%) hue-rotate(14deg) brightness(110%) contrast(101%);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.link {
+    text-decoration: none;
+}
+
+.home-button, .projects-button, .contact-button {
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: left;
+    font-family: "Lora", serif;
+    font-size: 22.5px;
+    margin-left: 0px;
+    background-color: white;
+    border-left: none;
+    border-right: none; 
+    padding-left: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.home-button:hover, .projects-button:hover, .contact-button:hover {
+    color: rgb(238,159,0);
+}
+
+.contact {
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.contact-url {
+    color: rgb(238,159,0);
+    text-decoration: none;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.contact-url:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+    .title {
+        display: none;
+    }
+    .contact {
+        display: none;
+    }
+    .sidebar-buttons {
+        display: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .title {
+        color: white;
+    }
+    .star {
+        filter: invert(100%);
+    }
+    .home-button, .projects-button, .contact-button {
+        background-color: rgb(30,30,30);
+        color: white;
+    }
+    .contact {
+        color: white;
+    }
+}

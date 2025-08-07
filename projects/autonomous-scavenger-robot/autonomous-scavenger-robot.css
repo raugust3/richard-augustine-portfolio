@@ -1,0 +1,271 @@
+.mini-navigation {
+    font-size: 15px;
+    position: fixed;          
+    top: 0;
+    left: 358px;
+    right: 0;
+    display: flex;
+    justify-content: center;   
+    background-color: white;  
+    z-index: 1;
+    padding-top: 15px;
+}
+
+.mini-nav {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    padding-bottom: 5px;
+    margin-right: 158px;
+    border-bottom: 1px solid rgb(31, 31, 31);
+}
+
+.projects-text {
+    text-decoration: none;
+    color: rgb(123, 123, 123);
+    margin-right: 5px;
+}
+
+.projects-text:hover {
+    color: rgb(238,159,0);
+}
+
+.document {
+    background-color: rgb(50,50,50);
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-right: 150px;
+    padding-bottom: 5px;
+    height: 100%;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.title-block {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.video {
+    padding-top: 12px;
+    margin-bottom: -4px;
+}
+
+.doc-title {
+    font-size: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
+    line-height: 55px;
+    padding-top: 80px;
+}
+
+.doc-summary {
+    font-size: 22px;
+    line-height: 25px;
+    padding-top: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.doc-skills {
+    padding-top: 40px;
+    color: rgb(173, 173, 173);
+    padding-bottom: 30px;
+}
+
+.doc-date {
+    padding-top: 0px;
+    color: rgb(173, 173, 173);
+    padding-bottom: 50px;
+}
+
+.view-github {
+    width: 200px;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    background-color: rgb(50,50,50);
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+    border: 3px solid white;
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.view-github:hover {
+    border-color: white;
+    background-color: white;
+    color: rgb(50,50,50);
+}
+
+.header1 {
+    font-size: 40px;
+    padding-left: 150px;
+    padding-right: 150px;
+    line-height: 55px;
+    color: white;
+    text-align: center;
+}
+
+.header2 {
+    font-size: 40px;
+    padding-left: 150px;
+    padding-right: 150px;
+    line-height: 55px;
+    color: white;
+    text-align: left;
+}
+
+.header3 {
+    font-size: 12px;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: -60px;
+    padding-left: 150px;
+    padding-right: 150px;
+    line-height: 55px;
+    color: white;
+    text-align: left;
+}
+
+.text {
+    font-size: 16px;
+    line-height: 25px;
+    padding-top: 0px;
+    margin-top: -20px;
+    margin-bottom: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
+    text-align: left;
+    color: white;
+}
+
+.video-src {
+    padding: 0;
+    border: none;
+    width: 99.98%;
+}
+
+.text-section {
+    background-color: rgb(60, 60, 60);
+}
+
+.image-and-caption {
+    position: relative;
+}
+
+.photos img {
+    width: 100%;
+}
+
+.caption {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background-color: rgb(50,50,50);
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.doc-remarks {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.url {
+    color: rgb(238,159,0);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.url:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 535px) {
+    .caption {
+        display: none;
+    }    
+    .doc-remarks {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .doc-skills {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .doc-title,
+    .header1,
+    .header2,
+    .header3,
+    .text {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 850px) {
+    .doc-skills {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .header2 {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .header3 {
+        padding-left: 50px;
+        padding-right: 50px;        
+    }
+    .text {
+        padding-left: 50px;
+        padding-right: 50px;        
+    }
+}
+
+@media (max-width: 1200px) {
+    .mini-navigation {
+        top: 72px;
+        left: 0px;
+    }
+    .projects-text {
+        margin-left: 26px;
+    }
+    .mini-nav {
+        margin-right: 0px;
+        padding-bottom: 8px;
+    }   
+    .document {
+        margin: 0;
+        margin-top: 50px;
+        margin-right: 0px;
+    }
+    .url {
+        text-decoration: underline;
+    }
+    .right {
+        margin-left: 0px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .mini-navigation {
+        background-color: rgb(30,30,30);
+        color: white;
+    }
+    .mini-nav {
+        border-bottom: 1px solid rgb(215, 215, 215);
+    }
+}
