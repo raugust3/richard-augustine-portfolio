@@ -18,9 +18,11 @@ function closeMenu() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll('.fade-in').forEach((el, index) => {
-        setTimeout(() => {
-            el.classList.add('visible');
-        }, index * 200);
-    });
+    setTimeout(() => {
+        document.querySelectorAll('.fade-in').forEach((el, index) => {
+            setTimeout(() => {
+                el.classList.add('visible');
+            }, index * 200);
+        });
+    }, 1000); // Wait 1 second before starting animations
 });

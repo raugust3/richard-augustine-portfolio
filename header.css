@@ -28,13 +28,17 @@
     white-space: nowrap;
 }
 
+.name a {
+    color: black;
+    text-decoration: none;
+}
+
 .top-right {
     width: 140px;
     display: flex;
     align-items: center;
     justify-content: right;
     margin-right: 25px;
-    
 }
 
 .hamburger-button {
@@ -94,6 +98,10 @@
     .name {
         font-size: clamp(20px, 4vw, 24px);
     }
+    .name a {
+        color: black;
+        text-decoration: none;
+    }
     .hamburger-header {
         width: clamp(30px, 5vw, 44px);
     }
@@ -112,6 +120,10 @@
     }
     .name {
         color: white;
+    }
+    .name a {
+        color: white;
+        text-decoration: none;
     }
     .hamburger-header {
         filter: invert(100%);
