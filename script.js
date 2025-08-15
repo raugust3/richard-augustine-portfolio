@@ -24,5 +24,5 @@ document.addEventListener("DOMContentLoaded", () => {
                 el.classList.add('visible');
             }, index * 200);
         });
-    }, 1000); // Wait 1 second before starting animations
+    }, 500); // wait half a second before starting animations
 });
