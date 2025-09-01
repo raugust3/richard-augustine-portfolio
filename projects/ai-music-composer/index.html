@@ -86,142 +86,248 @@
         </nav>
         <main class="right">
             <nav class="mini-navigation">
-                <p class="mini-nav"><a href="../../projects/" class="projects-text">PROJECTS</a> / Autonomous Scavenger Robot</p>
+                <p class="mini-nav"><a href="../../projects/" class="projects-text">PROJECTS</a> / AI Music Composer</p>
             </nav>
             <section class="document fade-in">
                 <section class="title-block">
                     <div class="doc-title">
-                        Making an Autonomous Scavenger Robot
+                        Making an AI That Can Compose Music
                     </div>
                     <div class="doc-summary">
-                        A robotic scavenger hunt, fueled by rotating brushes, color sensors, and a whole lot of PLA.
+                        ...because we're too lazy to compose ourselves.
                     </div>
                     <div class="doc-skills">
-                        <span style="color: white; font-weight: 500;">Skills</span>: Microcontrollers, Soldering, Circuit Design, SolidWorks, Robotics, Sensors
+                        <span style="color: white; font-weight: 500;">Skills</span>: Python, Machine Learning, Project Management, Collaboration, Hardware
                     </div>
                     <div class="doc-date">
-                        January 2025 - March 2025
+                        October 2024 - March 2025
                     </div>
                     <div>
-                        <a href="https://github.com/raugust3/autonomous-scavenger-robot" target="_blank" class="view-github">
+                        <a href="https://github.com/raugust3/lstm-music-composer" target="_blank" class="view-github">
                             View GitHub Repository
                         </a>
                     </div>
                 </section>
                 <section class="video">
                     <p class="header1">Video Demonstration</p>
-                    <video controls src="../../images/projects/autonomous-scavenger-robot/asr_video_demo.mp4" class="video-src" loading="lazy"></video>
+                    <video controls src="../../images/projects/ai-music-composer/ai-music-composer-demo-editted.mp4" class="video-src" loading="lazy"></video>
                 </section>
                 <section class="text-section">
-                    <p class="header2">Overview</p>
-                    <p class="text">Robotic systems are being developed to collect objects of interest from environments that are currently too dangerous for humans 
-                        (for example, rovers on mars). This was the inspiration behind our course project in MSE2202: Introduction to Mechatronic Design. The mission was
-                        to build a robot that can explore an unmarked arena, identify only green “gems”, collect them, and return to base autonomously, all under 2 minutes.
-                    </p>
-                </section>
-                <section class="photos">
-                    <div class="image-and-caption">
-                        <img src="../../images/projects/autonomous-scavenger-robot/premium_photo-1688778318945-6a3277fd0f05 (1) (1).png" alt="rover on mars" loading="lazy">
-                        <span class="caption">Vision of Desired Result</span>
-                    </div>
-                </section>
-                <section class="text-section">
-                    <p class="header2">Our Solution</p>
-                    <p class="text">To tackle the challenge, we broke the task into three main systems: Intake, Sortation, and Drivetrain. Each had its own 
-                        challenges and iterations before things started coming together.
-                    </p>
-                </section>
-                <section class="photos">
-                    <div class="image-and-caption">
-                        <img src="../../images/projects/autonomous-scavenger-robot/collage.png" alt="collage of all sketches made during project" loading="lazy">
-                        <span class="caption">Figure 1: A collage of all our Ideas for Intake, Drivetrain, and Sortation</span>
-                    </div>
-                </section>
-                <section class="text-section">
-                    <p class="header3">Our Solution</p>
-                    <p class="header2">Intake – The Brush Roller & Dumper</p>
-                    <p class="text">To collect gems, we started with many ideas: grabbing arms, vacuums, even Ferris wheels. Eventually, we landed on a simpler and surprisingly 
-                        effective solution: a horizontal rotating brush that continuously swept gems into a bucket as the robot moved forward. After a period of time, this bucket would then dump all the collected gems (using servo motors) into the collection subsystem back at the base.
-                    </p>
-                </section>
-                <section class="photos">
-                    <div class="image-and-caption">
-                        <img src="../../images/projects/autonomous-scavenger-robot/intake.png" alt="intake subsystem sketch and detail design" loading="lazy">
-                        <span class="caption">Figure 2: Intake Subsystem Sketch and Detail Design in SolidWorks</span>
-                    </div>
-                </section>
-                <section class="text-section">
-                    <p class="header3">Our Solution</p>
-                    <p class="header2">Drivetrain – Ball Point Pin</p>
+                    <p class="header2">Motivation</p>
                     <p class="text">
-                        Staying in the theme of simplicity, we built a 2-wheel drive system, balanced the bot’s weight with ballpoint pins, and tuned the wheels for traction using tape. Initially, we started off with two ballpoint pins for better stability, but quickly noticed that the bot would veer unpredictably left and right due to slight height differences in the pins, varying friction, and imperfections in the floor. This was a major issue for us because no sortation of the gems could be performed if the bot couldn't reliably return to base.
+                        Outside of engineering, I’ve always loved art: painting, piano, photography… you name it, I’ve probably tried it. Honestly, if the pay wasn’t so low, I might’ve pursued it as a career 😂 but while I’ve been glued to textbooks throughout school, I’ve constantly wondered how I could merge my love for art with engineering.
                     </p>
                     <p class="text">
-                        After many failed attempts of adjusting drive speeds for each wheel, adding counterweights, and implementing IR navigation, we replaced the two ballpoint pins with a single one out of desperation. This concentrated all the weight and frictional contact to one point, finally allowing our bot to drive straight… roughly 12 hours before the final showcase. Suffice it to say, this was an incredibly satisfying moment, and easily one of the highlights of working on the project.
+                        Meanwhile, AI was blowing up all over the internet: essays were being written in seconds, images were being produced that had me questioning reality, and it felt like AI could do just about anything a human could. However, I noticed there wasn’t much focus on AI composing music, which I thought would make for a really fun project. Turns out, I wasn’t the only one thinking that. A fellow member of Western Cyber Society, Henry, had the exact same idea. Since both of us were about to take on project manager roles within the club, we decided to team up, gather a group of eight, and bring the project to life.
                     </p>
                 </section>
                 <section class="photos">
                     <div class="image-and-caption">
-                        <img src="../../images/projects/autonomous-scavenger-robot/drivetrain.gif" alt="demonstration of ball point pin layouts" loading="lazy">
-                        <span class="caption">Figure 3: Drive Comparison Between Ball Point Pin Layouts</span>
-                    </div>
-                    <div class="image-and-caption">
-                        <img src="../../images/projects/autonomous-scavenger-robot/circuit.png" alt="bot drive circuit design" loading="lazy">
-                        <span class="caption">Figure 4: Bot Drive Circuit Design in EAGLE</span>
+                        <img src="../../images/projects/ai-music-composer/vision.webp" alt="robot playing piano" loading="lazy">
+                        <span class="caption">Vision of Desired Result (Robot Not Included)</span>
                     </div>
                 </section>
                 <section class="text-section">
-                    <p class="header3">Our Solution</p>
-                    <p class="header2">Sortation - Funnel & Pac-Man Disk</p>
+                    <p class="header2">Our Plan</p>
+                    <p class="text">We decided to start simple: build a machine learning model that could learn from classical piano music and generate its own compositions. This meant finding a suitable dataset in a format the model could understand, selecting the right model architecture, running inference to generate new sequences, and finally converting those outputs back into audible music.
+                    </p>
+                </section>
+                <section class="photos">
+                    <div class="image-and-caption">
+                        <img src="../../images/projects/ai-music-composer/flowchart1.png" alt="flowchart of project" loading="lazy">
+                        <span class="caption">Figure 1: A Rough Flowchart of How the Goal of Composing Music Would Be Achieved</span>
+                    </div>
+                </section>
+                <section class="text-section">
+                    <p class="header2">Data Collection & Preprocessing</p>
+                    <p class="text">For the dataset, we gathered a <a class="url" target="_blank" href="https://www.classicalarchives.com/midi.html">collection</a> of piano pieces by Mozart, Beethoven, and Chopin since they are easily recognizable, which made checking for overfitting much more straightforward. Initially, we thought we would need to convert audio recordings of these compositions into a format the model could understand. However, because these pieces are so well-known, computer-readable versions already exist online. These files, known as MIDI files, essentially represent digital sheet music, making them perfect for feeding into our model.
+                    </p>
+                </section>
+                <section class="photos">
+                    <div class="image-and-caption">
+                        <img src="../../images/projects/ai-music-composer/midi_explanation.png" alt="comparison between sheet music, midi visualization, and midi data" loading="lazy">
+                        <span class="caption">Figure 2: A Comparison Between Sheet Music, Midi Visualization, and Midi Data</span>
+                    </div>
+                </section>
+                <section class="text-section">
+                    <p class="header2">The Model</p>
                     <p class="text">
-                        Our favorite subsystem. Once our bot reaches base and dumps all the collected gems, they pass through a funnel and into a rotating “Pac-Man” disk with just enough space for one gem. A color sensor reads the gem, and the disk turns to drop the gems inside the bin if it is green, or outside the bin if it is not green. To improve performance, we painted, rewired, and lined the sorting wheel with foil to reflect colors better. We also added a vibration motor to stop gems from jamming in the funnel, a backboard to stop gems from missing the funnel, and kept the IR navigation to make sure our bot doesn't get lost.
+                        When planning this project, Henry and I had a few contenders for models we could use to accomplish the task. Autoencoders can be used by learning compressed representations of musical patterns and then decoding them to create new compositions. Generative Adversarial Networks (GANs) consist of two models in competition, one generating music and the other evaluating its realism, also presented a compelling option. Lastly, Recurrent Neural Networks (RNNs) work by learning patterns in sequences of musical notes and predicting the next note based on previously played ones. After doing research, we felt that RNNs most closely mimicked the way humans process and compose music, leading us to choose a specific variant known as the <i>Long Short-Term Memory</i> (LSTM) model for our implementation.
                     </p>
-                </section>
-                <section class="photos">
-                    <div class="image-and-caption">
-                        <img src="../../images/projects/autonomous-scavenger-robot/sortation.png" alt="sortation subsystem sketches and detail design" loading="lazy">
-                        <span class="caption">Figure 5: Sortation Subsystem Sketches and Detail Design in SolidWorks</span>
-                    </div>
-                </section>
-                <section class="text-section">
-                    <p class="header2">Putting it All Together</p>
                     <p class="text">
-                        Using ultrasonic sensors, IR communication, and serial connections between our ESP-32 boards, we were able to integrate all of the subsystems so that a plan for gem collection and sorting could be programmed. While the collection system ran continuously in the background, the bot followed a timed routine: it made 30-second trips forward and back to transport gems to the base, then rotated to a new direction and repeated the process until the 2-minute timer expired.
+                        You would undoubtedly ask, “Why not just use a regular RNN?” While RNNs and LSTMs essentially aim to accomplish the same task, standard RNNs have a much smaller memory capacity compared to LSTMs. For example, if I asked an RNN, “The sky is…”, it would (hopefully) respond with “blue.” But if I asked it, “Explain why the sky is blue,” by the second sentence it would start rambling about how the sky is actually just a reflection of the ocean and that's why deserts don't exist at night. This is because of a common mathematical issue called the vanishing gradient problem, where the gradient of the loss function decays exponentially over time. This is fine if the model is outputting one-word answers, but worse if the answers are meant to be longer since the model will forget more information faster and faster as the length of the answer increases.
+                    </p>
+                    <p class="text">
+                        LSTMs help solve this problem by allowing a larger memory of past inputs. An additional enhancement to these models is the <i>attention mechanism</i>. While RNNs and LSTMs use previous inputs to influence future outputs, they lack the ability to label what parts of previous inputs are important to a specific output. This is important in music generation, where the model must understand structural elements like verses and choruses to repeat or develop them appropriately. The attention mechanism allows the model to focus on these significant sections, improving its ability to generate musically structured compositions. Here’s an example that helped me understand what the model was doing:
                     </p>
                 </section>
                 <section class="photos">
                     <div class="image-and-caption">
-                        <img src="../../images/projects/autonomous-scavenger-robot/overall_sketch_and_cad.png" alt="bot sketch and detail design" loading="lazy">
-                        <span class="caption">Figure 6: Bot Sketch and Detail Design in SolidWorks</span>
+                        <img src="../../images/projects/ai-music-composer/joke.png" alt="a joke about attention" loading="lazy">
                     </div>
                 </section>
                 <section class="text-section">
+                    <p class="header2">_</p>
+                    <p class="text">
+                        Unless you’ve seen this joke before, you probably fell for it (like I did… more times than I’d like to admit). As humans, we don’t read word-by-word. Instead, we read the most important parts and assume where the sentence is going from there. This is what attention is doing within our model: guiding the LSTM in what it needs to remember or forget as time goes on.
+                    </p>
+                    <p class="text">
+                        Our final model had the following architecture: Bidirectional LSTM Layer &rarr; Dropout Layer &rarr; Attention Layer &rarr; LSTM Layer &rarr; Dropout Layer &rarr; Dense Layer &rarr; Softmax Activation Layer. Tying up the loose ends here:
+                    </p>
+                    <ul class="text">
+                        <li>A bidirectional LSTM layer analyzes data forward (from start to end) and backward (from end to start). The outputs of both are combined to give a better final result.</li>
+                        <li>Dropout layers are used throughout the model to prevent overfitting. </li>
+                        <li>A dense layer organizes all the possible notes/chords it has learned. </li>
+                        <li>The softmax activation layer assigns probabilities over all possible notes/chords in the dense layer, enabling the model to predict the most likely next musical element.</li>
+                    </ul>
+                    <p class="header2">Results</p>
+                    <p class="text">
+                        Alright alright, I'm done with the theory. Let's hear how it sounds! Here's the model after one epoch:
+                    </p>
+                </section>
+                <section class="audio">
+                    <audio controls class="custom-audio-player">
+                        <source src="../../images/projects/ai-music-composer/epoch1.mp3" type="audio/mpeg" />
+                        Your browser does not support the audio element.
+                    </audio>
+                </section>
+                <section class="text-section">
+                    <p class="header2">_</p>
+                    <p class="text">
+                        Well, that definitely sounded like the first time someone tried playing the piano. Clearly, it hasn't learned much from the dataset, but let's see how it improves after 10 epochs:
+                    </p>
+                </section>
+                <section class="audio">
+                    <audio controls class="custom-audio-player">
+                        <source src="../../images/projects/ai-music-composer/epoch10.mp3" type="audio/mpeg" />
+                        Your browser does not support the audio element.
+                    </audio>
+                </section>
+                <section class="text-section">
+                    <p class="header2">_</p>
+                    <p class="text">
+                        The model seems to have picked up some more complex chords and develop some patterns, but still struggles with varying its rhythm to create more interesting pieces. By the way, the model only outputs MIDI files during generation. To produce audible audio, we manually apply a piano soundfont, which is a step that will be automated in the final product. Anyway, let's skip forward to 20 epochs:
+                    </p>
+                </section>
+                <section class="audio">
+                    <audio controls class="custom-audio-player">
+                        <source src="../../images/projects/ai-music-composer/epoch20.mp3" type="audio/mpeg" />
+                        Your browser does not support the audio element.
+                    </audio>
+                </section>
+                <section class="text-section">
+                    <p class="header2">_</p>
+                    <p class="text">
+                        There’s noticeably more melodic coherence here, and we’re finally seeing some variation in note lengths, although still limited. The good news is that the model continues to improve with each epoch. So, with the remaining Google Colab credits we had, we trained the model for a final 50 epochs. Here’s what it sounds like now:
+                    </p>
+                </section>
+                <section class="audio">
+                    <audio controls class="custom-audio-player">
+                        <source src="../../images/projects/ai-music-composer/epoch50.mp3" type="audio/mpeg" />
+                        Your browser does not support the audio element.
+                    </audio>
+                </section>
+                <section class="text-section">
+                    <p class="header2">_</p>
+                    <p class="text">
+                        This is arguably the best-sounding output we've generated, but with a loss of 0.1534, there's a good chance there's some overfitting here. Regardless, I was extremely impressed with this result, as this is truly something I would listen to if I was trying to zone in during a study session, at a cafe, or any other situation where background music would fit in.
+                    </p>
+                    <p class="header2">Applying the Model</p>
+                    <p class="text">
+                        The hardest part of building the model was complete, and now it was time to present our findings in a way that non-technical audiences could understand, as we would be showcasing the project at a tech expo at the end of the year. So, we got to work on a slick front-end 😎
+                    </p>
+                    <p class="header3">Applying the Model</p>
+                    <p class="header2">Language & Functionality</p>
+                    <p class="text">
+                        We chose to build the front end using a Python GUI library called Pygame. This decision was made to maintain consistency in programming languages, as the model itself was also implemented in Python. Additionally, most of our team was already familiar with Python, which made development more efficient. Initially, the functionality was simple: users could click a button to generate a 30-second composition.
+                    </p>
+                </section>
+                <section class="photos">
+                    <div class="image-and-caption">
+                        <img src="../../images/projects/ai-music-composer/frontend1.png" alt="first iteration of front end" loading="lazy">
+                    </div>
+                </section>
+                <section class="text-section">
+                    <p class="header3">Applying the Model</p>
+                    <p class="header2">Making it Look Not-Boring</p>
+                    <p class="text">
+                        We knew that no one would want to visit our booth if the presentation of our project was a black background with some text on it. So, we thought that a cool way to make our front end more interesting was to visualize the music being composed. The world of music visualization is a vast one, and it was fun looking through the different options that were available (Video Source: <a class="url" target="_blank" href="https://minimeters.app">MiniMeters</a>):
+                    </p>
+                </section>
+                <section class="video">
+                    <video autoplay loop src="../../images/projects/ai-music-composer/minimeters.mp4" class="video-src" loading="lazy"></video>
+                </section>
+                <section class="text-section">
+                    <p class="header2">_</p>
+                    <p class="text">
+                        Eventually, we settled on visualizing the music using a <a class="url" target="_blank" href="https://en.wikipedia.org/wiki/Spectrogram#:~:text=A%20spectrogram%20is%20a%20visual,may%20be%20called%20waterfall%20displays."><i>spectrogram</i></a>, which shows the frequency content of the audio over time in a visually intuitive way. Also, it looks really cool.
+                    </p>
+                </section>
+                <section class="photos">
+                    <div class="image-and-caption">
+                        <img src="../../images/projects/ai-music-composer/frontend2.png" alt="second iteration of front end" loading="lazy">
+                    </div>
+                </section>
+                <section class="text-section">
+                    <p class="header3">Applying the Model</p>
+                    <p class="header2">Making it Interactive</p>
+                    <p class="text">
+                        At this point, we were nearly finished with the project! With plenty of time remaining before the presentation, we began workig on "Collaboration Mode". As shown in the video demonstration, this feature allows users to connect a MIDI-compatible device—such as a digital keyboard—and input a starting melody. The machine learning model then takes that melody as inspiration and builds upon it, generating a continuation in the style of classical music.
+                    </p>
+                </section>
+                <section class="photos">
+                    <div class="image-and-caption">
+                        <img src="../../images/projects/ai-music-composer/frontend3.png" alt="second iteration of front end" loading="lazy">
+                    </div>
+                </section>
+                <section class="text-section">
+                    <p class="header2">The Presentation</p>
+                    <p class="text">
+                        Although this endeavor began as a passion project, it eventually evolved into a powerful tool to help musicians overcome creative block, provide royalty-free music for content creators, and offering customizable background music for environments like cafés, study sessions, and restaurants. When we presented it at the Western Cyber Society’s Toronto Tech Expo, it generated significant interest from both observers and judges as they played to their heart's desire and have it turned into classical masterpieces. This really validated the project's impact and marked it as a success to our team.
+                    </p>
                     <p class="header2">Next Steps and Conclusion</p>
                     <p class="text">
-                        As shown in the video demonstration, we were successful in completing the task by collecting a green gem! Spirits were high, and those late nights seemed to have paid off... until the funnel jammed 10 seconds later, bringing all gem collection to an abrupt halt. Despite our efforts to prevent this, there are improvements that could be made to address the issue completely, such as implementing a track system to guide the gems into the funnel one at a time.
+                        This was one of my favorite projects I've worked on so far. Combining what I do as a hobby with what I do at school, <i>while</i> working with people who have the same interests?? Recipe for a great time.
                     </p>
                     <p class="text">
-                        Other areas, including power management, weight distribution, and the overall appearance of the robot, could also benefit from refinement. However, for a first attempt at designing and building a fully autonomous system under a tight deadline, we were proud of what we accomplished and even prouder that it moved, collected, and (briefly) sorted as intended.
+                        That being said, this project is far from over. We may have created a classical composer, but this model can easily branch off to compose pop, rock, jazz, and more. Even better, adding multiple instruments is something I'm really excited to see. Who knows, maybe one day this model could get so complex that it can produce whole songs! Until then, I took some time to train the model on video game music, and here's how it adapted:
                     </p>
+                </section>
+                <section class="audio">
+                    <audio controls class="custom-audio-player">
+                        <source src="../../images/projects/ai-music-composer/videogame-music.mp3" type="audio/mpeg" />
+                        Your browser does not support the audio element.
+                    </audio>
+                </section>
+                <section class="text-section">
+                    <p class="header2">_</p>
                     <p class="text">
-                        Overall, this was a great learning experience and the first robot I’ve ever built, and hopefully the first of many. Details about this project, including the code and SolidWorks files, can be found on my <a href="https://github.com/raugust3/autonomous-scavenger-robot" target="_blank" class="url">GitHub</a>. Maybe one day I'll revisit this project and turn it to a Roomba that can clean my floors 😎
+                        If you read this far, thank you so much and I hope you enjoyed! Details about this project can be found on my <a href="https://github.com/raugust3/lstm-music-composer" target="_blank" class="url">GitHub</a> :)
                     </p>
                 </section>
                 <section class="photos">
                     <div class="image-and-caption">
-                        <img src="../../images/projects/autonomous-scavenger-robot/20250331_160543.jpg" alt="project group smiling" loading="lazy">
-                        <span class="caption">Figure 7: Team & Final Designs after Successful Implementation</span>
+                        <img src="../../images/projects/ai-music-composer/team-picture.JPG" alt="project group smiling" loading="lazy">
+                        <span class="caption">Figure 7: Team after Successful Implementation (Great logo! I wonder who designed it 🤭)</span>
                     </div>
                 </section>
                 <section>
                     <p class="doc-remarks">
                         Many Thanks to my Team: 
-                        <a href="https://janik.codes" target="_blank" class="url">
-                            Janik A.</a>, 
-                        <a href="https://www.linkedin.com/in/matthew-linders/" target="_blank" class="url">
-                            Matthew L.</a>, 
-                        and <a href="https://www.linkedin.com/in/jaemin-cho-854112272/" target="_blank" class="url">
-                            Justin C.</a> 🎉
+                        <a href="https://www.linkedin.com/in/henry-h-w/" target="_blank" class="url">
+                            Henry W.</a>, 
+                        <a href="https://www.linkedin.com/in/ruifeng-raymond-li/" target="_blank" class="url">
+                            Raymond L.</a>,
+                        <a href="https://www.linkedin.com/in/dlim67/" target="_blank" class="url">
+                            David L.</a>,
+                        <a href="https://www.linkedin.com/in/elbertc/" target="_blank" class="url">
+                            Elbert C.</a>,
+                        <a href="https://www.linkedin.com/in/ryanhuan/" target="_blank" class="url">
+                            Ryan H.</a>,  
+                        <a href="https://www.linkedin.com/in/shawn-yuen-au64/" target="_blank" class="url">
+                            Shawn Y.</a>,   
+                        and <a href="https://www.linkedin.com/in/leo-karras-ba245332a/" target="_blank" class="url">
+                            Leo K.</a> 🎉
                     </p>
                 </section>
             </section>

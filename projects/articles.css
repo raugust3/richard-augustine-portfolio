@@ -50,10 +50,11 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-bottom: 12px;
 }
 
 .video {
-    padding-top: 12px;
+    padding-top: px;
     margin-bottom: -4px;
 }
 
@@ -172,6 +173,19 @@
 
 .photos img {
     width: 100%;
+}
+
+.audio {
+    background-color: rgb(242,242,242);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-audio-player {
+  width: 100%;
+  filter: invert(0%) brightness(120%) contrast(90%);
 }
 
 .caption {
