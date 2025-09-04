@@ -91,96 +91,114 @@
             <section class="document fade-in">
                 <section class="title-block">
                     <div class="doc-title">
-                        Making an Electronic Inhaler Counter for Visually-Impaired Patients
+                        Making a Spotify Playlist Generator (feat. ChatGPT)
                     </div>
                     <div class="doc-summary">
-                        A tactile, non-visual solution to help visually impaired asthma patients track inhaler usage.
+                        Coding a better way to discover new music!
                     </div>
                     <div class="doc-skills">
-                        <span style="color: white; font-weight: 500;">Skills</span>: Microcontrollers, Soldering, Circuit Design, Onshape, Biomedical Engineering, Project Management
+                        <span style="color: white; font-weight: 500;">Skills</span>: Python, APIs, Javascript, Project Management
                     </div>
                     <div class="doc-date">
                         January 2023 - April 2023
                     </div>
                     <div class="project-link">
-                        <a href="https://github.com/raugust3/inhaler-counter" target="_blank" class="view-github">
+                        <a href="https://github.com/raugust3/spotify-playlist-generator" target="_blank" class="view-github">
                             View GitHub Repository
                         </a>
                     </div>
                 </section>
-                <section class="photos">
-                    <div class="image-and-caption">
-                        <img src="../../images/projects/inhaler-counter/cool_view.png" alt="inhaler counter model" loading="lazy">
-                    </div>
-                </section>
                 <section class="text-section">
                     <p class="header2">Overview</p>
-                    <p class="text">Let’s talk about a problem that doesn’t get enough attention (source: I have asthma and wear glasses).</p>
-                    <p class="text">For people who are both visually impaired and living with asthma, tracking medication usage through an inhaler can be frustrating. Most commercial inhalers rely entirely on visual counters or a tiny number printed on the top to tell you how many doses a canister has. In my opinion, that’s not inclusive design.</p>
-                    <p class="text">So, our team set out to change that.</p>
-
-                    <p class="header2">Our Solution</p>
-                    <p class="text">We designed a non-visual inhaler counter that fits onto an existing inhaler and tells users how much medication they have left. But instead of using a screen, it uses beeps and vibrations to communicate dosage levels. Think of it like a car key fob: compact, tactile, and discreet. We wanted the user to get the information they needed, quickly and clearly, without ever needing to look at the device.</p>
-                </section>
-                <section class="photos">
-                    <div class="image-and-caption">
-                        <img src="../../images/projects/inhaler-counter/key-comparison.png" alt="inhaler counter model comparison to car key fob" loading="lazy">
-                        <span class="caption">Figure 1: Inhaler Counter Model Comparison to Car Key Fob</span>
-                    </div>
-                </section>
-                <section class="text-section">
-                    <p class="header2">How It Works</p>
-                    <p class="text">The inhaler counter runs on an Arduino Nano and includes:</p>
+                    <p class="text">Have you ever listened to a song and thought, “Wow, that was a great song!! I want to hear more like it…” only to check Spotify’s recommendations and find that it’s either:</p>
                     <ul class="text">
-                        <li>Arduino Nano</li>
-                        <li>Piezo buzzer & speaker</li>
-                        <li>Two tactile buttons</li>
-                        <li>3D-printed PLA case</li>
+                        <li>More music from the same artist, but not the same style</li>
+                        <li>Music that doesn’t match the style at all</li>
+                        <li>Or a random popular song that just happens to be trending, not relevant to what you liked</li>
                     </ul>
-                    <p class="text">Hold the yellow button to start, and you’ll start to hear beeping. Each beep adds 10 doses to the computer's memory, and you keep adding doses until it matches the number of doses your new canister holds (for example, if your canister holds 50 doses, hold the yellow button until you hear five beeps). After filling, each press of the red button reduces the count after taking a puff. When the dosage drops below 20%, the counter vibrates, warning you that it’s time to refill.</p>
-                    <p class="text">We even textured the buttons differently so they’re distinguishable by touch: a raised bump marks the red button.</p>
+                    <p class="text">That was our team’s experience with Spotify at the time, so we sought out a way to provide better recommendations to Spotify users as a project for our club, <a class="url" target="_blank" href="https://www.westerncybersociety.ca">Western Cyber Society</a>.</p>
                 </section>
                 <section class="photos">
                     <div class="image-and-caption">
-                        <img src="../../images/projects/inhaler-counter/early-prototype.jpg" alt="inhaler counter infographic" loading="lazy">
-                        <span class="caption">Figure 2: Early Prototype of Inhaler Counter (speaker, textured buttons, and buzzer yet to be included)</span>
-                    </div>
-                    <div class="image-and-caption">
-                        <img src="../../images/projects/inhaler-counter/inco-info.png" alt="inhaler counter infographic" loading="lazy">
-                        <span class="caption">Figure 3: Inhaler Counter Infographic</span>
+                        <img src="../../images/projects/spotify-playlist-generator/meme.png" alt="a meme describing spotify's recommendation system" loading="lazy">
                     </div>
                 </section>
                 <section class="text-section">
-                    <p class="header2">Design Considerations</p>
-                    <p class="text">
-                        The enclosure is compact and durable enough to fit in a pocket without interfering with normal inhaler usage. We avoided velcro because of the noise it makes, whixh is something we realized could be disruptive for users who are sound-sensitive. Instead, we went with a quiet, elastic strap that fits most inhalers. A thin protoboard made the whole circuit lightweight and compact. Another accessibility-related feature that we added was a vibration motor that accompanied the speaker in providing feedback to the user. This addition also allowed patients with <i>auditory</i> impairments to also use this device, which I thought was a brilliantly simple way to improve on the accessibility of our final product.
-                    </p>
+                    <p class="header2">Our Solution</p>
+                    <p class="text">At first, this seemed like a challenging task, considering that Spotify is a proprietary service. Fortunately, Spotify provides access to a wealth of backend data through its public <a class="url" target="_blank" href="https://developer.spotify.com/documentation/web-api">API</a>. Using this API, we were able to retrieve detailed information about individual songs on the platform. For any given track, Spotify labels a set of audio features, including:</p>
+                    <ul class="text">
+                        <li><i>Acousticness</i>: A score from 0.0 to 1.0 indicating the likelihood that a track is acoustic. A value closer to 1.0 means higher confidence that the track is acoustic.</li>
+                        <li><i>Danceability</i>: Describes how suitable a track is for dancing based on its tempo, rhythm stability, beat strength, and overall regularity. A score of 0.0 is least danceable, and 1.0 is most danceable.</li>
+                        <li><i>Energy</i>: A score from 0.0 to 1.0 reflecting the track’s intensity and activity level. Energetic tracks typically feel fast, loud, and dynamic.</li>
+                        <li><i>Instrumentalness</i>: Predicts whether a track contains no vocals. For example, “ooh” and “aah” sounds are treated as instrumental, whereas rap or spoken word are considered vocal. A value closer to 1.0 indicates a higher probability that the track is purely instrumental.</li>
+                        <li><i>Valence</i>: A score from 0.0 to 1.0 describing the musical positiveness conveyed by the track. High valence tracks tend to sound happier and more euphoric, while low valence tracks sound sadder or more somber.</li>
+                    </ul>
+                    <p class="text">And that’s just the beginning. Spotify provides even more features—such as tempo, key, loudness, and speechiness—all of which we leveraged to match the characteristics of a given song and recommend the most similar tracks to users.</p>
+                </section>
+                <section class="photos">
+                    <div class="image-and-caption">
+                        <img src="../../images/projects/spotify-playlist-generator/api.png" alt="a look at spotify's api documentation" loading="lazy">
+                        <span class="caption">Figure 1: Spotify's API Documentation</span>
+                    </div>
+                </section>
+                <section class="text-section">
+                    <p class="header3">Our Solution</p>
+                    <p class="header2">The Algorithm & Front-End</p>
+                    <p class="text">The algorithm starts by taking a song chosen by the user and analyzing its audio features using Spotify’s API. Using this information, the algorithm asks Spotify to find a list of songs that are similar in style, audio features, and sound. Finally, it creates a new playlist on the user’s account, adds the original song, and appends the recommended tracks, effectively generating a playlist that feels like an extension of the user’s initial song choice. For customization, we also allowed users to tweak certain audio features to better control what they want to hear.</p> 
                     
+                    <p class="text">This algorithm was coded in Python and the front-end was created using React JS. <a class="url" target="_blank" href="https://fastapi.tiangolo.com">FastAPI</a> was used to help integrate our python into a web application.</p>
+                </section>
+                <section class="photos">
+                    <div class="image-and-caption">
+                        <img src="../../images/projects/spotify-playlist-generator/interface.png" alt="spotify playlist generator interface" loading="lazy">
+                        <span class="caption">Figure 2: User Interface of Final Product</span>
+                    </div>
+                </section>
+                <section class="text-section">
+                    <p class="header3">Our Solution</p>
+                    <p class="header2">Incorporating AI</p>
+                    <p class="text">
+                        A condition for the project was that we had to incorporate AI into it somehow. Given the context of our tool, we saw an opportunity to use AI not to create music directly, but to understand and recommend music more intelligently. Using <a class="url" target="_blank" href="https://openai.com/api/">OpenAI API's</a> GPT-4 model, we built a system where users can input a natural language prompt, something like "chill jazz for studying" or "hype songs for a gym session", and have the AI interpret that into meaningful Spotify audio features like danceability, valence, energy, acousticness, and more.
+                    </p>
+                    <p class="text">
+                        The AI essentially acts as a translator between human intent and music metadata, generating the appropriate track characteristics and genre suggestions. These are then passed into the Spotify API to curate a playlist that reflects the user’s mood or use-case with surprising accuracy. This layer of AI reasoning turned a basic playlist generator into a highly personalized, music discovery tool that personally helped me discover new music during testing.
+                    </p>
                     <p class="header2">Next Steps and Conclusion</p>
                     <p class="text">
-                        So, we achieved what we sought out to do. Current market options like the PuffMinder DOSER or the PUFFClicker offer visual readouts and app syncing, but they’re either not accessible to blind users or rely too heavily on smartphones. Ours doesn’t. It just works—with simple button presses and immediate, meaningful feedback. This project was submitted into a first-year engineering competition and won "Most Popular Project" out of 150 submissions, which I'm pretty proud of! In fact, I even designed a branding around our project and called it 'inco' (as in <u>in</u>haler <u>co</u>unter, you can clap now), which I produced stickers of to give away during the showcase :)
+                        And with that, we reached our final product. When we showcased our project at Western Cyber Society’s first <a class="url" target="_blank" href="https://www.instagram.com/torontotechexpo/?hl=en">Toronto Tech Expo</a>, hosted at IBM Headquarters, it received a lot of interest and support from judges, observers, and peers alike. In fact, the response was so positive that we were awarded the Entertainment Award! It was an incredible day for our team, and for my first time helping to develop a full-fledged software application, I’d say it went really well :)
                     </p>
                     <p class="text">
-                        With more time, I’d also love to see:
+                        With more time, I’d love to see:
                     </p>
                     <ul class="text">
-                        <li>Voice feedback for more intuitive communication</li>
-                        <li>Rechargeable battery integration</li>
-                        <li>A logging system that tracks historical usage</li>
-                        <li>Better materials for durability, like a lightweight aluminum case</li>
+                        <li>Applying the algorithm to different music services, such as Apple Music, Soundcloud, Youtube Music, etc.</li>
+                        <li>Enhanced recommendation engine with AI that can be fine-tuned with a user's recommendations to each song.</li>
+                        <li>Changing playlist generation based on external factors, such as time or weather (this was about the same time Spotify's 'Daylist' feature was announced, whoops).</li>
                     </ul>
                     <p class="text">
-                        With these small upgrades, I can easily see this go from prototype to a fully deployable assistive tech product.
-                    </p>
-                    <p class="text">
-                        Overall, this was a great learning experience and the first engineering project I’ve worked on, and only the first of many. Details about this project, including the code and SolidWorks files, can be found on my <a href="https://github.com/raugust3/inhaler-counter" target="_blank" class="url">GitHub</a>! ^o^
+                        Overall, this was a great project that eventually inspired me to pursue the <a class="url" href="../ai-music-composer/">AI Music Composer</a> project, taking things a step further with combining music and tech 👀 Details about the Spotify Playlist Generator project can be found on my <a href="https://github.com/raugust3/spotify-playlist-generator" target="_blank" class="url">GitHub</a>, thanks for reading!
                     </p>
                 </section>
                 <section class="photos">
                     <div class="image-and-caption">
-                        <img src="../../images/projects/inhaler-counter/inco-presentation.jpg" alt="project showcase" loading="lazy">
-                        <span class="caption">Figure 4: Project Showcase at Engineering Competition</span>
+                        <img src="../../images/projects/spotify-playlist-generator/team.jpg" alt="project showcase" loading="lazy">
+                        <span class="caption">Figure 3: Team & Prize after Successful Implementation </span>
                     </div>
+                </section>
+                <section>
+                    <p class="doc-remarks">
+                        Many Thanks to my Team: 
+                        <a href="https://www.linkedin.com/in/ethan-carvalho/" target="_blank" class="url">
+                            Ethan C.</a>, 
+                        <a href="https://www.linkedin.com/in/ruifeng-raymond-li/" target="_blank" class="url">
+                            Raymond L.</a>,
+                        <a href="https://www.linkedin.com/in/elbertc/" target="_blank" class="url">
+                            Elbert C.</a>,
+                        <a href="https://www.linkedin.com/in/kfengg/" target="_blank" class="url">
+                            Kevin F.</a>,    
+                        and <a href="https://www.linkedin.com/in/kevinliu-uwo/" target="_blank" class="url">
+                            Kevin L.</a> 🎉
+                    </p>
                 </section>
             </section>
         </main>
