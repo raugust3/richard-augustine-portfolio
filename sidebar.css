@@ -69,7 +69,7 @@
     text-decoration: underline;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     .title {
         display: none;
     }

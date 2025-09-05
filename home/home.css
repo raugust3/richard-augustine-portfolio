@@ -391,13 +391,13 @@
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
     .project-images {
         justify-content: left;
     }   
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     .title {
         display: none;
     }
