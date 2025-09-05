@@ -43,7 +43,7 @@ a {
 
 @media (min-width: 1100px) and (max-width: 1300px) {
     .right {
-        margin-left: clamp(18px, calc(18px + (100vw - 1100px) * 0.5), 118px);
+        margin-left: clamp(18px, calc(18px + (100vw - 1100px) * 0.61), 140px);
         margin-top: 72px;
     }
 }
