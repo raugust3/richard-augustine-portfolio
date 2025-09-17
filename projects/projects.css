@@ -173,7 +173,7 @@
     }
 }
 
-@media (max-width: 1030px) {
+@media (max-width: 1130px) {
     .project-images {
         margin-right: 0;
     }
@@ -191,7 +191,7 @@
     }
 }
 
-@media (max-width: 1430px) {
+@media (max-width: 1433px) {
     .project-images {
         justify-content: center;
     }

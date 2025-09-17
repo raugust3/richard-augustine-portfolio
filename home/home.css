@@ -324,7 +324,7 @@
     }
 }
 
-@media (min-width: 535px) and (max-width: 1030px) {
+@media (min-width: 535px) and (max-width: 1130px) {
     .project-images {
         margin-right: 0px;
     }
@@ -391,7 +391,7 @@
     }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1433px) {
     .project-images {
         justify-content: left;
     }   
